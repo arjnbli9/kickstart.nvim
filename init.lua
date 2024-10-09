@@ -157,6 +157,13 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Set default indentation settings
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.shiftwidth = 4 -- Number of spaces for each step of auto-indent
+vim.opt.tabstop = 4 -- Number of spaces a tab counts for
+vim.opt.softtabstop = 4 -- Number of spaces a tab counts for while editing
+vim.opt.smartindent = true -- Auto-indent new lines
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -930,9 +937,9 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
